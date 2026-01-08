@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQUAD GACOR | SMKN Pasirian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #121212; /* Hitam arang untuk background */
+            --card-white: #ffffff;
+            --pink-accent: #ff1d58; /* Pink cerah untuk aksen */
+            --pink-soft: #f75990;
+            --text-light: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header dengan Efek Neon */
+        header {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            border-bottom: 4px solid var(--pink-accent);
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--pink-accent);
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            text-shadow: 0 0 10px var(--pink-accent), 0 0 20px var(--pink-soft);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px var(--pink-accent); }
+            to { text-shadow: 0 0 20px var(--pink-soft), 0 0 30px var(--pink-accent); }
+        }
+
+       .school-name {
+            font-size: 1.2rem;
+            background: var(--pink-accent);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 50px;
+            margin-top: 15px;
+        }
+
+        /* Grid Galeri Polaroid */
+       .container {
+            max-width: 1100px;
+            margin: -50px auto 50px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+       .polaroid {
+            background: var(--card-white);
+            padding: 15px 15px 50px 15px; /* Bingkai bawah lebih lebar khas Polaroid */
+            box-shadow: 0 15px 35px rgba(255, 29, 88, 0.2);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        /* Memberikan efek rotasi acak agar terlihat seperti foto yang diletakkan di meja */
+       .polaroid:nth-child(even) { transform: rotate(3deg); }
+       .polaroid:nth-child(odd) { transform: rotate(-3deg); }
+
+       .polaroid:hover {
+            transform: scale(1.05) rotate(0deg);
+            z-index: 10;
+            box-shadow: 0 20px 40px rgba(255, 29, 88, 0.4);
+        }
+
+       .polaroid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            filter: sepia(20%) contrast(1.1); /* Efek vintage film */
+        }
+
+       .caption {
+            margin-top: 15px;
+            color: #333;
+            text-align: left;
+        }
+
+       .caption h3 {
+            font-family: 'Indie Flower', cursive; /* Font tulisan tangan */
+            font-size: 1.5rem;
+            color: var(--pink-accent);
+            margin-bottom: 5px;
+        }
+
+       .caption p {
+            font-size: 0.85rem;
+            color: #555;
+            margin: 2px 0;
+        }
+
+        /* Bagian Quotes */
+       .quotes-section {
+            background: #1a1a1a;
+            padding: 80px 20px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+       .quote-card {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+       .quote-text {
+            font-size: 1.8rem;
+            font-style: italic;
+            color: var(--pink-soft);
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        /* Responsif untuk HP */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+           .container { margin-top: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SQUAD GACOR</h1>
+        <div class="school-name">XII TKJ B • SMKN PASIRIAN</div>
+    </header>
+
+    <div class="container">
+        <div class="polaroid">
+            <img src="https://via.placeholder.com/300x300?text=OKTA" alt="Okta Berlianti">
+            <div class="caption">
+                <h3>Okta Berlianti</h3>
+                <p><b>Kelas:</b> XII TKJ B</p>
+                <p><b>Alamat:</b> Selok Awar-Awar</p>
+                <p><b>Sekolah:</b> SMKN Pasirian</p>
+            </div>
+        </div>
+
+        <div class="polaroid">
+            <img src="https://via.placeholder.com/300x300?text=LAILA" alt="Laila Huswatul Khotimah">
+            <div class="caption">
+                <h3>Laila Huswatul Khotimah</h3>
+                <p><b>Kelas:</b> XII TKJ B</p>
+                <p><b>Alamat:</b> Tempeh</p>
+                <p><b>Sekolah:</b> SMKN Pasirian</p>
+            </div>
+        </div>
+
+        <div class="polaroid">
+            <img src="https://via.placeholder.com/300x300?text=NADIA" alt="Nadia Putri Agustin">
+            <div class="caption">
+                <h3>Nadia Putri Agustin</h3>
+                <p><b>Kelas:</b> XII TKJ B</p>
+                <p><b>Alamat:</b> Penanggal</p>
+                <p><b>Sekolah:</b> SMKN Pasirian</p>
+            </div>
+        </div>
+
+        <div class="polaroid">
+            <img src="https://via.placeholder.com/300x300?text=SAVIKA" alt="Savika Salsabila Putri">
+            <div class="caption">
+                <h3>Savika Salsabila Putri</h3>
+                <p><b>Kelas:</b> XII TKJ B</p>
+                <p><b>Alamat:</b> Candi</p>
+                <p><b>Sekolah:</b> SMKN Pasirian</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="quotes-section">
+        <div class="quote-card">
+            <p class="quote-text">"Sahabat sejati adalah ia yang menemanimu saat semua orang pergi menjauhimu."</p>
+            <p>— Walter Winchell</p>
+            <br><br>
+            <p class="quote-text">"Sahabat itu seperti bintang, ia memang tidak selalu terlihat. Namun selalu ada untukmu."</p>
+            <p>— Anonim</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 SQUAD GACOR - Proudly created for SMKN Pasirian
+    </footer>
+
+</body>
+</html>
